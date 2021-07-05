@@ -1,0 +1,34 @@
+# config file based on defaults.py
+EXP:
+  NAME: "HAN"
+  DEVICE: "cuda"
+PATH:
+  TRAIN_FILE: "data/train_subset.json"
+  VALID_FILE: "data/valid_subset.json"
+  TEST_FILE: "data/test_subset.json"
+  VOCAB_FILE: "data/vocab/"
+  LOG_DIR: "saved/HAN256/"
+DATA:
+  VOCAB_MIN_COUNT: 50
+  SENTENCE_SEGMENTATION: True
+MODEL:
+  NAME: "HAN"
+  BIDIRECTIONAL: True
+SYSTEM:
+  NUM_GPUS: 1
+ARCH:
+  SENTENCE_ENCODER:
+    TYPE: "lstm"
+    INPUT_DIM: 200
+  EMBEDDING:
+    DIM: 200
+  HAN:
+    GRU_HIDDEN: 256
+TRAIN:
+  BATCH_SIZE: 16
+PREDICT:
+  PREDICT_FILE: "../data/predict.json"
+FEED:
+  LAYERS: 2
+  HIDDEN: [256, 100]
+  INPUT_SIZE: 512

@@ -1,0 +1,29 @@
+# config file based on defaults.py
+EXP:
+  NAME: "RNN"
+  DEVICE: "cuda"
+PATH:
+  TRAIN_FILE: "data/train_subset.json"
+  VALID_FILE: "data/valid_subset.json"
+  TEST_FILE: "data/test_subset.json"
+  VOCAB_FILE: "data/vocab/"
+  LOG_DIR: "saved/RNN/subset/"
+DATA:
+  VOCAB_MIN_COUNT: 50
+MODEL:
+  NAME: "RNNClassifier"
+  EMBEDDING_PRETRAINED: True
+  BIDIRECTIONAL: True
+SYSTEM:
+  NUM_GPUS: 1
+ARCH:
+  SENTENCE_ENCODER:
+    TYPE: "rnn"
+    INPUT_DIM: 200
+    HIDDEN_DIM: 256
+    NUM_LAYER: 1
+    DROPOUT: 0
+TRAIN:
+  BATCH_SIZE: 16
+PREDICT:
+    PREDICT_FILE: "../data/predict.json"

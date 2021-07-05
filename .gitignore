@@ -1,0 +1,27 @@
+__pycache__/
+
+# data file
+data/*
+
+*.out # server output files
+deep-pipeline/data/*.txt # data file, too large to push them
+deep-pipeline/data/glove.6B.50d.txt
+deep-pipeline/data/*
+
+# basic pipeline
+# basic-pipeline/data/*
+basic-pipeline/glove.twitter.27B.200d.txt
+basic-pipeline/cooc.pkl
+*.pkl
+
+# deep pipeline
+test_subset.json
+train_subset.json
+valid_subset.json
+saved/*
+deep-pipeline/data/vocab/*
+deep-pipeline/saved/*
+
+# HAN 
+imdb_final.json
+.ipynb_checkpoints/*

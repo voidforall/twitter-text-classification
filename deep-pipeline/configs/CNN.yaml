@@ -1,0 +1,24 @@
+# config file based on defaults.py
+EXP:
+  NAME: "CNN"
+  DEVICE: "cuda"
+PATH:
+  TRAIN_FILE: "data/train_full.json"
+  VALID_FILE: "data/valid_full.json"
+  TEST_FILE: "data/test_full.json"
+  VOCAB_FILE: "data/vocab/"
+  LOG_DIR: "saved/CNN/full/"
+DATA:
+  VOCAB_MIN_COUNT: 50
+MODEL:
+  NAME: "CNNClassifier"
+  EMBEDDING_PRETRAINED: True
+SYSTEM:
+  NUM_GPUS: 1
+ARCH:
+  SENTENCE_ENCODER:
+    TYPE: "cnn"
+TRAIN:
+  BATCH_SIZE: 16
+PREDICT:
+  PREDICT_FILE: "../data/predict.json"

@@ -1,0 +1,4 @@
+torch==1.7.0
+allennlp==1.2.1
+yacs==0.1.6
+sklearn
